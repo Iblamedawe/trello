@@ -7,10 +7,40 @@ body
     justify-content: space-around;
     margin-top: 20px;
 }
-.board div {
+.board > div {
     border: 1px solid black;
     width: 30%;
     min-height: 300px;
     padding: 10px;
     box-sizing: border-box;
+}
+#toDo, #inProgress, #done, .task{
+    border: 0;
+    width: 100%;
+}
+#toDo>.task{
+    background-color: lightyellow;
+}
+#inProgress>.task{
+    background-color: lightblue;
+}
+#done>.task{
+    background-color: lightgreen;
+}
+.task{
+    border-radius: 10px;
+    height: 30px;;
+    box-shadow: 2px 2px 5px grey;
+}
+.task>button{
+    float: right;
+    background-color: red;
+    color:white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.task>p{
+    float: left;
 }
