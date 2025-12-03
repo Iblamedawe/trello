@@ -1,0 +1,16 @@
+body
+{   
+    text-align: center;
+}
+.board {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.board div {
+    border: 1px solid black;
+    width: 30%;
+    min-height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
