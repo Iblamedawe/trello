@@ -1,6 +1,8 @@
 body
 {   
     text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 .board {
     display: flex;
@@ -13,6 +15,27 @@ body
     min-height: 300px;
     padding: 10px;
     box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 5px 15px 25px 35px;
+    background-color: #f9f9f9;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 #toDo, #inProgress, #done, .task{
     border: 0;
@@ -30,17 +53,23 @@ body
 .task{
     border-radius: 10px;
     height: 30px;;
+    padding: 2px;
     box-shadow: 2px 2px 5px grey;
 }
 .task>button{
     float: right;
     background-color: red;
     color:white;
-    border: none;
+    border: 0;
     border-radius: 50%;
     width: 24px;
     height: 24px;
+    padding: 0;
+    margin: auto;
+    margin-top: 1%;
 }
 .task>p{
     float: left;
+    margin: auto;
+    margin-top: 1%;
 }
