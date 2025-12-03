@@ -18,6 +18,8 @@ function dragstarthandler(ev){
     }
     target.appendChild(document.getElementById(data));
 }
+
+/*
 const yormom = document.getElementById("yormom");
 function generateYorMom(){
     for (let i = 0; i<10; i++){
@@ -36,5 +38,4 @@ function generateYorMom(){
         `;
         yormom.appendChild(newAbortion);
     }
-}
-document.addEventListener("DOMContentLoaded",generateYorMom());
+}*/
