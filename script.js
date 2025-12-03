@@ -12,30 +12,28 @@ function dragstarthandler(ev){
         // Do nothing or show a message
         return;
     }
-    // If the cell already has an element inside, block the drop
-    if (target.children.length > 0) {
-        return; // stop
-    }
     target.appendChild(document.getElementById(data));
 }
 
-/*
-const yormom = document.getElementById("yormom");
-function generateYorMom(){
-    for (let i = 0; i<10; i++){
-        var newAbortion = document.createElement("div");
-        newAbortion.innerHTML = `
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        <div class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div>
-        `;
-        yormom.appendChild(newAbortion);
+const toDo = document.getElementById("toDo");
+var nextId = 0;
+function addTask(){
+    const taskName = document.getElementById("name").value;
+    const task = document.createElement("div");
+    task.classList.add("task");
+    task.classList.add("img1");
+    task.setAttribute("draggable","true");
+    task.setAttribute("id","task"+nextId);
+    task.ondragstart = dragstarthandler;
+    const p = document.createElement("p");
+    const butt = document.createElement("button");
+    butt.textContent = "X";
+    butt.onclick = function(){
+        task.remove();
     }
-}*/
+    task.appendChild(butt);
+    p.textContent = taskName;
+    task.appendChild(p);
+    toDo.appendChild(task);
+    nextId++;
+}
