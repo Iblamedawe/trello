@@ -9,11 +9,11 @@
 </head>
 <body>
     <h1>gay</h1>
-    <input type="text" placeholder="Új feladat"> <button>Hozzáadás</button>
+    <input id="name" type="text" placeholder="Új feladat"> <button onclick="addTask()">Hozzáadás</button>
     <div class="board">
-        <div><h1>Teendő</h1></div>
-        <div><h1>Folyamatban</h1></div>
-        <div><h1>Kész</h1></div>
+        <div><h1>Teendő</h1><div id="toDo" class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div></div>
+        <div><h1>Folyamatban</h1><div id="inProgress" class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div></div>
+        <div><h1>Kész</h1><div id="done" class="div1" ondrop="drophandeler(event)"ondragover="dragoverhandeler(event)"></div></div>
     </div>
 </body>
 </html>
